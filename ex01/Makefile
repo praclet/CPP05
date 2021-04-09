@@ -1,6 +1,7 @@
 NAME			:=	ex01
 
 SRCS			:=	Bureaucrat.cpp	\
+					Form.cpp		\
 					main.cpp
 
 SRCS_DIR		:=	./srcs/
