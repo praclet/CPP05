@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 13:13:14 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/09 15:00:40 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/11 13:47:55 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,20 +28,25 @@ class Form
 		unsigned char const _signingGrade;
 		unsigned char const _executingGrade;
 		bool _isSigned;
+		std::string const _target;
+		virtual void _execute(Bureaucrat const & executor) const = 0;
 	protected:
+		Form & operator=(Form const & src);
 		void _checkSigningGrade(int grade) const;
 		void _checkExecutingGrade(int grade) const;
 		Form();
 	public:
-		Form(std::string const & name, int signingGrade, int executingGrade);
+		Form(std::string const & name, int signingGrade, int executingGrade, 
+				std::string const & target);
 		Form(Form const & src);
 		~Form();
-		Form & operator=(Form const & src);
 		std::string const & getName() const;
+		std::string const & getTarget() const;
 		int getSigningGrade() const;
 		int getExecutingGrade() const;
 		bool isSigned() const;
 		void beSigned(Bureaucrat const & signary);
+		void execute(Bureaucrat const & executor) const;
 		class GradeTooHighException : public std::exception
 		{
 		};	

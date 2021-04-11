@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 13:13:14 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/09 15:00:40 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/11 12:55:16 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,11 @@ class Form
 		void _checkSigningGrade(int grade) const;
 		void _checkExecutingGrade(int grade) const;
 		Form();
+		Form & operator=(Form const & src);
 	public:
 		Form(std::string const & name, int signingGrade, int executingGrade);
 		Form(Form const & src);
 		~Form();
-		Form & operator=(Form const & src);
 		std::string const & getName() const;
 		int getSigningGrade() const;
 		int getExecutingGrade() const;

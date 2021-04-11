@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 13:13:12 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/09 14:52:54 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/11 13:50:12 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,9 @@ Form::Form()
 {
 }
 
-Form::Form(std::string const & name, int signingGrade, int executingGrade)
-	: _name(name), _signingGrade(signingGrade), _executingGrade(executingGrade), _isSigned(false)
+Form::Form(std::string const & name, int signingGrade, int executingGrade, std::string const & target)
+	: _name(name), _signingGrade(signingGrade), _executingGrade(executingGrade),
+	_isSigned(false), _target(target)
 {
 	_checkSigningGrade(signingGrade);
 	_checkExecutingGrade(executingGrade);
@@ -66,6 +67,11 @@ Form & Form::operator=(Form const & src)
 std::string const & Form::getName() const
 {
 	return (_name);
+}
+
+std::string const & Form::getTarget() const
+{
+	return (_target);
 }
 
 int Form::getSigningGrade() const
@@ -103,4 +109,10 @@ std::ostream & operator<< (std::ostream & os, Form const & element)
 		<< element.getSigningGrade() << " at least, it can be executed by bureaucrats of grade "
 		<< element.getExecutingGrade() << " and above." << std::endl; 
 	return (os);
+}
+
+void Form::execute(Bureaucrat const & executor) const
+{
+	_checkExecutingGrade(executor.getGrade());
+	_execute(executor);
 }

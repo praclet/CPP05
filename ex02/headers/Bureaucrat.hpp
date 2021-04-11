@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/08 16:27:06 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/09 15:10:01 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/11 10:21:11 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,3 @@ class Bureaucrat
 std::ostream & operator << (std::ostream & os, Bureaucrat const & element); 
 
 #endif
-
-
-
-/*
-signForm function to the Bureaucrat. If the signing is successful, it will
-print something like "<bureaucrat> signs <form>", otherwise it will print something
-like "<bureaucrat> cannot sign <form> because <reason>".
-*/
