@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 17:19:46 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/11 13:52:02 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/11 17:53:35 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PRESIDENTIALPARDONFORM_HPP
 
 # include "Form.hpp"
+# define PPF_NAME "Presidential Pardon"
 
 class PresidentialPardonForm : public Form
 {

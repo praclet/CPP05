@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 10:24:38 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/11 13:52:19 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/11 17:57:05 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define SHRUBBERYCREATIONFORM_HPP
 
 # include "Form.hpp"
+# define SCF_NAME "Shrubbery Creation"
 
 class ShrubberyCreationForm : public Form
 {

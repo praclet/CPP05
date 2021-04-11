@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 10:22:09 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/11 13:52:10 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/11 17:55:53 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define ROBOTOMYREQUEST_HPP
 
 # include "Form.hpp"
+# define RRF_NAME "Robotomy Request"
 
 class RobotomyRequestForm : public Form
 {

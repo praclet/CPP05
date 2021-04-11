@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 11:57:34 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/11 13:52:54 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/11 17:56:36 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(std::string const & target)
-	: Form("Shrubbery Creation", 145, 137, target)
+	: Form(SCF_NAME, 145, 137, target)
 {
 }
 

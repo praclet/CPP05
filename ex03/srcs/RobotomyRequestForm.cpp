@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 11:42:53 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/11 13:51:02 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/11 17:56:06 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ RobotomyRequestForm::~RobotomyRequestForm()
 }
 
 RobotomyRequestForm::RobotomyRequestForm(std::string const & target)
-	: Form("Robotomy Request", 72, 45, target)
+	: Form(RRF_NAME, 72, 45, target)
 {
 }
 
