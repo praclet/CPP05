@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/08 16:52:47 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/11 14:09:10 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/13 14:16:38 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 void Bureaucrat::_checkGrade(int grade)
 {
 	if (grade <= 0)
-		throw(new Bureaucrat::GradeTooHighException());
+		throw(Bureaucrat::GradeTooHighException());
 	if (grade > 150)
-		throw(new Bureaucrat::GradeTooLowException());
+		throw(Bureaucrat::GradeTooLowException());
 }
 
 Bureaucrat::Bureaucrat() : _name(""), _grade(150)
@@ -83,11 +83,11 @@ void Bureaucrat::signForm(Form & form) const
 	}
 	catch (Form::GradeTooHighException const & e)
 	{
-		std::cout << "Bureaucrat's rank is too high.";
+		std::cout << "Bureaucrat's grade is too high.";
 	}
 	catch (Form::GradeTooLowException const & e)
 	{
-		std::cout << "Bureaucrat's rank is too low.";
+		std::cout << "Bureaucrat's grade is too low.";
 	}
 }
 

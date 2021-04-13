@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 10:24:38 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/11 17:57:05 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/13 14:36:37 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class ShrubberyCreationForm : public Form
 	public:
 		ShrubberyCreationForm(std::string const & target);
 		ShrubberyCreationForm(ShrubberyCreationForm const & src);
-		~ShrubberyCreationForm();
+		virtual ~ShrubberyCreationForm();
 		void execute(Bureaucrat const & executor) const;
 };
 

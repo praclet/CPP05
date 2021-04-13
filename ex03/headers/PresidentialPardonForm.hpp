@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 17:19:46 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/11 17:53:35 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/13 14:36:05 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class PresidentialPardonForm : public Form
 	public:
 		PresidentialPardonForm(std::string const & target);
 		PresidentialPardonForm(PresidentialPardonForm const & src);
-		~PresidentialPardonForm();
+		virtual ~PresidentialPardonForm();
 		void execute(Bureaucrat const & executor) const;
 };
 

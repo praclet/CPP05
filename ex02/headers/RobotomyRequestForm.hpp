@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 10:22:09 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/11 13:52:10 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/13 14:37:19 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class RobotomyRequestForm : public Form
 	public:
 		RobotomyRequestForm(std::string const & target);
 		RobotomyRequestForm(RobotomyRequestForm const & src);
-		~RobotomyRequestForm();
+		virtual ~RobotomyRequestForm();
 		void execute(Bureaucrat const & executor) const;
 };
 

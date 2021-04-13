@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/08 16:52:47 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/08 17:22:25 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/13 12:44:54 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 void Bureaucrat::_checkGrade(int grade)
 {
 	if (grade <= 0)
-		throw(new GradeTooHighException());
+		throw(GradeTooHighException());
 	if (grade > 150)
-		throw(new GradeTooLowException());
+		throw(GradeTooLowException());
 }
 
 Bureaucrat::Bureaucrat() : _name(""), _grade(150)
