@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 14:18:53 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/13 14:38:56 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/14 09:30:06 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,12 @@ int main(void)
 		PresidentialPardonForm *ptr1;
 		RobotomyRequestForm *ptr2;
 		ShrubberyCreationForm *ptr3;
+		Form *ptr4;
 
 		ptr1 = (PresidentialPardonForm*) bob.makeForm(PPF_NAME, "Samuel II Croonie");
 		ptr2 = (RobotomyRequestForm*)bob.makeForm(RRF_NAME, "GHY 5900");
 		ptr3 = (ShrubberyCreationForm*)bob.makeForm(SCF_NAME, "home");
+		ptr4 = bob.makeForm("basic form","whatever");
 		std::cout << *ptr1 << *ptr2 << *ptr3;
 		delete ptr1;
 		delete ptr2;

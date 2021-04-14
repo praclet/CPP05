@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 14:13:09 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/12 10:19:29 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/14 09:32:59 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,11 @@ Form * Intern::makeForm(std::string const & formName, std::string const & target
 	{
 		if (formNames[i] == formName)
 		{
-			std::cout << "Intern creates " << formName << "." << std::endl;
+			std::cout << "Intern creates '" << formName << "'." << std::endl;
 			return (formCreators[i](targetName));
 		}
 	}
-	std::cout << "Intern can't create " << formName << "." << std::endl;
+	std::cout << "Intern can't create '" << formName << "'." << std::endl;
 	return (NULL);
 }
 

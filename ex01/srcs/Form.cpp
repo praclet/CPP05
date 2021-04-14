@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 13:13:12 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/09 14:52:54 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/14 09:12:22 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,11 +83,11 @@ bool Form::isSigned() const
 	return (_isSigned);
 }
 
-void Form::beSigned(Bureaucrat const & signary)
+void Form::beSigned(Bureaucrat const & signatory)
 {
 	if (!_isSigned)
 	{
-		_checkSigningGrade(signary.getGrade());
+		_checkSigningGrade(signatory.getGrade());
 		_isSigned = true;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 13:13:14 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/11 12:55:16 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/14 09:11:59 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ class Form
 		int getSigningGrade() const;
 		int getExecutingGrade() const;
 		bool isSigned() const;
-		void beSigned(Bureaucrat const & signary);
+		void beSigned(Bureaucrat const & signatory);
 		class GradeTooHighException : public std::exception
 		{
 		};	
