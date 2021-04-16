@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 13:13:14 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/11 13:58:16 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/16 13:35:39 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ class Form
 		Form(std::string const & name, int signingGrade, int executingGrade, 
 				std::string const & target);
 		Form(Form const & src);
-		~Form();
+		virtual ~Form();
 		std::string const & getName() const;
 		std::string const & getTarget() const;
 		int getSigningGrade() const;

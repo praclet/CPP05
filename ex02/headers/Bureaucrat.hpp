@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/08 16:27:06 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/11 14:00:47 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/16 13:35:24 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class Bureaucrat
 	public:
 		Bureaucrat(std::string const & name, int grade);
 		Bureaucrat(Bureaucrat const & src);
-		~Bureaucrat();
+		virtual ~Bureaucrat();
 		Bureaucrat & operator=(Bureaucrat const & src);
 		std::string const & getName() const;
 		int getGrade() const;

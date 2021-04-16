@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 14:13:10 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/12 10:23:44 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/16 13:36:17 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Intern
 	public:
 		Intern();
 		Intern(Intern const & src);
-		~Intern();
+		virtual ~Intern();
 		Intern & operator=(Intern const &);
 		Form * makeForm(std::string const & formName, std::string const & targetName);
 };
