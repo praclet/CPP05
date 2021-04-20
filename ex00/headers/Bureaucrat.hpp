@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/08 16:27:06 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/16 09:43:37 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/19 09:31:22 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,15 @@ class Bureaucrat
 		void decrementGrade();
 		class GradeTooHighException : public std::exception
 		{
+			public:
+				GradeTooHighException();
+				virtual const char* what(void) const _NOEXCEPT;
 		};	
 		class GradeTooLowException : public std::exception
 		{
+			public:
+				GradeTooLowException();
+				virtual const char* what(void) const _NOEXCEPT;
 		};	
 };
 

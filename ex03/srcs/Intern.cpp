@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 14:13:09 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/14 09:32:59 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/20 14:47:31 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ Form * Intern::makeForm(std::string const & formName, std::string const & target
 	std::size_t	const nbForms = 3;
 	std::string const formNames[nbForms] = {PPF_NAME, RRF_NAME, SCF_NAME};
 	Form * (*formCreators[nbForms])(std::string const &) =
-		{ &Intern::_createPPF, &Intern::_createRRF, &Intern::_createSCF};
+		{&Intern::_createPPF, &Intern::_createRRF, &Intern::_createSCF};
 
 	for (std::size_t i = 0;i < nbForms;i++)
 	{

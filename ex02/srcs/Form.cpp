@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 13:13:12 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/11 13:59:11 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/19 13:30:34 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 #include <exception>
 #include "Form.hpp"
 #include "Bureaucrat.hpp"
-
 
 static void _checkGrade(int grade, int refGrade)
 {
@@ -117,4 +116,31 @@ void Form::execute(Bureaucrat const & executor) const
 		throw Form::FormNotSignedException();
 	_checkExecutingGrade(executor.getGrade());
 	_execute(executor);
+}
+
+Form::GradeTooHighException::GradeTooHighException()
+{
+}
+
+const char* Form::GradeTooHighException::what(void) const _NOEXCEPT
+{
+	return ("Bureaucrat's grade is too high for this form.");
+}
+
+Form::GradeTooLowException::GradeTooLowException()
+{
+}
+
+const char* Form::GradeTooLowException::what(void) const _NOEXCEPT
+{
+	return ("Bureaucrat's grade is too low for this form.");
+}
+
+Form::FormNotSignedException::FormNotSignedException()
+{
+}
+
+const char* Form::FormNotSignedException::what(void) const _NOEXCEPT
+{
+	return ("Form is not signed.");
 }

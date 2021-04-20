@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 13:13:12 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/14 09:12:22 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/19 13:17:58 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,4 +103,22 @@ std::ostream & operator<< (std::ostream & os, Form const & element)
 		<< element.getSigningGrade() << " at least, it can be executed by bureaucrats of grade "
 		<< element.getExecutingGrade() << " and above." << std::endl; 
 	return (os);
+}
+
+Form::GradeTooHighException::GradeTooHighException()
+{
+}
+
+const char* Form::GradeTooHighException::what(void) const _NOEXCEPT
+{
+	return ("Bureaucrat's grade is too high for this form.");
+}
+
+Form::GradeTooLowException::GradeTooLowException()
+{
+}
+
+const char* Form::GradeTooLowException::what(void) const _NOEXCEPT
+{
+	return ("Bureaucrat's grade is too low for this form.");
 }

@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/08 16:52:47 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/13 12:44:54 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/19 12:43:09 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,4 +72,22 @@ std::ostream & operator << (std::ostream & os, Bureaucrat const & element)
 	os << element.getName() << ", bureaucrat grade "
 		<< element.getGrade() << "." << std::endl;
 	return (os);
+}
+
+Bureaucrat::GradeTooHighException::GradeTooHighException()
+{
+}
+
+const char* Bureaucrat::GradeTooHighException::what(void) const _NOEXCEPT
+{
+	return ("Bureaucrat's grade is too high.");
+}
+
+Bureaucrat::GradeTooLowException::GradeTooLowException()
+{
+}
+
+const char* Bureaucrat::GradeTooLowException::what(void) const _NOEXCEPT
+{
+	return ("Bureaucrat's grade is too low.");
 }
