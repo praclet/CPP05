@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/08 16:52:47 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/20 14:45:52 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/20 15:50:28 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ void Bureaucrat::signForm(Form & form) const
 		form.beSigned(*this);
 		std::cout << _name << " signs " << form.getName() << "." << std::endl;
 	}
-	catch (Exception const & e)
+	catch (std::exception const & e)
 	{
 		std::cout << _name << " can't sign " << form.getName()
 			<< " because: '" << e.what() << "'." << std::endl;
@@ -98,7 +98,7 @@ void Bureaucrat::executeForm(Form const & form) const
 		std::cout << _name << " has executed form '"
 			<< form.getName() << "'." << std::endl;
 	}
-	catch (Exception const & e)
+	catch (std::exception const & e)
 	{
 		std::cout << _name << " can't execute " << form.getName()
 			<< " because: '" << e.what() << "'." << std::endl;

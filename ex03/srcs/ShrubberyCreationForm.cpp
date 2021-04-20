@@ -6,7 +6,7 @@
 /*   By: praclet <praclet@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 11:57:34 by praclet           #+#    #+#             */
-/*   Updated: 2021/04/11 17:56:36 by praclet          ###   ########lyon.fr   */
+/*   Updated: 2021/04/20 15:48:53 by praclet          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(std::string const & target)
 
 void ShrubberyCreationForm::_execute(Bureaucrat const & executor) const
 {
-	std::ofstream result(getTarget() + "_shrubbery", std::ofstream::out | std::ofstream::trunc);
+	std::ofstream result((getTarget() + "_shrubbery").c_str(), std::ofstream::out | std::ofstream::trunc);
 
 	(void) executor;
 	result << "             * *" << std::endl;
